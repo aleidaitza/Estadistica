@@ -1,0 +1,255 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Tabla de frecuencias},
+  pdfauthor={Aleida Jimenez Itza},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Tabla de frecuencias}
+\author{Aleida Jimenez Itza}
+\date{2022-03-09}
+
+\begin{document}
+\maketitle
+
+\hypertarget{importar-la-matriz-iris}{%
+\section{1.- Importar la matriz iris}\label{importar-la-matriz-iris}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{data}\NormalTok{(iris)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{exploracion-de-la-matriz-dimension-de-la-matriz-tiene-150-individuos-y-5-variables}{%
+\section{Exploracion de la matriz dimension de la matriz tiene 150
+individuos y 5
+variables}\label{exploracion-de-la-matriz-dimension-de-la-matriz-tiene-150-individuos-y-5-variables}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dim}\NormalTok{(iris)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 150   5
+\end{verbatim}
+
+\hypertarget{nombre-de-las-variables}{%
+\section{Nombre de las variables}\label{nombre-de-las-variables}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{colnames}\NormalTok{(iris) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"
+\end{verbatim}
+
+\hypertarget{tipos-de-variables}{%
+\section{Tipos de variables}\label{tipos-de-variables}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(iris) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+\end{verbatim}
+
+\hypertarget{en-busca-de-factores-perdidos}{%
+\section{En busca de factores
+perdidos}\label{en-busca-de-factores-perdidos}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{anyNA}\NormalTok{(iris) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+\hypertarget{construccion-de-la-tabla-de-frecuencias}{%
+\section{construccion de la tabla de
+frecuencias}\label{construccion-de-la-tabla-de-frecuencias}}
+
+Posicionarnos en una variable especifica Petal.Lenght indico que el
+nombre me lo acorte a PL, lo que resulte de esa indicacion quiero que lo
+que ponga en formato tabla, lo que resulte adquiera un formato de
+data.frame A partir de lo anterior, voy a generar una nueva variable
+(objeto) llamada \textbf{tabla\_PL}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tabla\_PL}\OtherTok{\textless{}{-}}\FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{table}\NormalTok{(}\AttributeTok{PL=}\NormalTok{iris}\SpecialCharTok{$}\NormalTok{Petal.Length))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Petal\_Length}\OtherTok{\textless{}{-}}\FunctionTok{transform}\NormalTok{(tabla\_PL,}
+          \AttributeTok{freqAC=}\FunctionTok{cumsum}\NormalTok{(Freq),}
+          \AttributeTok{Rel=}\FunctionTok{round}\NormalTok{(}\FunctionTok{prop.table}\NormalTok{(Freq),}\DecValTok{3}\NormalTok{ ),}
+          \AttributeTok{RelAC=}\FunctionTok{round}\NormalTok{(}\FunctionTok{cumsum}\NormalTok{(}\FunctionTok{prop.table}\NormalTok{(Freq)),}\DecValTok{3}\NormalTok{))}
+\NormalTok{Petal\_Length}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##     PL Freq freqAC   Rel RelAC
+## 1    1    1      1 0.007 0.007
+## 2  1.1    1      2 0.007 0.013
+## 3  1.2    2      4 0.013 0.027
+## 4  1.3    7     11 0.047 0.073
+## 5  1.4   13     24 0.087 0.160
+## 6  1.5   13     37 0.087 0.247
+## 7  1.6    7     44 0.047 0.293
+## 8  1.7    4     48 0.027 0.320
+## 9  1.9    2     50 0.013 0.333
+## 10   3    1     51 0.007 0.340
+## 11 3.3    2     53 0.013 0.353
+## 12 3.5    2     55 0.013 0.367
+## 13 3.6    1     56 0.007 0.373
+## 14 3.7    1     57 0.007 0.380
+## 15 3.8    1     58 0.007 0.387
+## 16 3.9    3     61 0.020 0.407
+## 17   4    5     66 0.033 0.440
+## 18 4.1    3     69 0.020 0.460
+## 19 4.2    4     73 0.027 0.487
+## 20 4.3    2     75 0.013 0.500
+## 21 4.4    4     79 0.027 0.527
+## 22 4.5    8     87 0.053 0.580
+## 23 4.6    3     90 0.020 0.600
+## 24 4.7    5     95 0.033 0.633
+## 25 4.8    4     99 0.027 0.660
+## 26 4.9    5    104 0.033 0.693
+## 27   5    4    108 0.027 0.720
+## 28 5.1    8    116 0.053 0.773
+## 29 5.2    2    118 0.013 0.787
+## 30 5.3    2    120 0.013 0.800
+## 31 5.4    2    122 0.013 0.813
+## 32 5.5    3    125 0.020 0.833
+## 33 5.6    6    131 0.040 0.873
+## 34 5.7    3    134 0.020 0.893
+## 35 5.8    3    137 0.020 0.913
+## 36 5.9    2    139 0.013 0.927
+## 37   6    2    141 0.013 0.940
+## 38 6.1    3    144 0.020 0.960
+## 39 6.3    1    145 0.007 0.967
+## 40 6.4    1    146 0.007 0.973
+## 41 6.6    1    147 0.007 0.980
+## 42 6.7    2    149 0.013 0.993
+## 43 6.9    1    150 0.007 1.000
+\end{verbatim}
+
+\end{document}
